@@ -7,7 +7,7 @@ An example use case would be for a user who wishes to create a nike.com account.
 
 In order for the password manager to work correctly, one must perform a few simple installations, namely the following libraries:
 
-PyQt5, nacl, and password-strength\n
+PyQt5, nacl, and password-strength
 
 This can be done by using the command "pip install ____" on a terminal window. These are dependencies that the password manager uses to create the UI, encrypt the password, and determine its strength. Moreover, one must have a form of Python installed on their device, as that is the only language the manager is written in as of now.
 
