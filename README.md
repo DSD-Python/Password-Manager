@@ -5,19 +5,19 @@ Almost all people residing in a first-world country use smartphone and laptop te
 
 An example use case would be for a user who wishes to create a nike.com account. This individual is prompted to make a password between 8-16 characters that has one capital letter and one special character. We have widgets that allow users to specify the maximum number of characters allowed, as well as the number of capital letters, numbers, and special characters required. The manager randomly selects and concatenates words from a pre-generated word list on the user's device, generating a password that meets the specific requirements. The app then encrypts the new password, and stores it locally on the device with other encrypted passwords. 
 
-In order for the password manager to work correctly, one must perform a few simple installations, namely the following libraries:
-PyQt5, nacl, and password-strength
+In order for the password manager to work correctly, one must perform a few simple installations, namely the following libraries:\n
+PyQt5, nacl, and password-strength\n
 This can be done by using the command "pip install ____" on a terminal window. These are dependencies that the password manager uses to create the UI, encrypt the password, and determine its strength. Moreover, one must have a form of Python installed on their device, as that is the only language the manager is written in as of now.
 
 Users must also create a folder titled "Passwords" in their Documents, and have a file titled "passwords.lst" in that folder which is the word list from which the program randomly selects the words to use. For our implementation, we used a wordlist from https://www.openwall.com/wordlists/ that is available for purchase.
 
 To see the password manager in action, one must download the .ipynb file from our Github repository and run it in a Python environment. We did so using Jupyter Labs.
 
-The main elements of the project include the following:
-Password Generation: Generates strong, random passwords based on user preferences (e.g., length, special characters, numbers, capital letters).
-Password Encryption: Encrypts generated passwords using the NaCl library for enhanced security.
-Password Decryption: Allows users to decrypt encrypted passwords by providing the secret key used for encryption.
-Password Strength Evaluation: Provides an indication of the strength of generated passwords based on industry-standard metrics.
+The main elements of the project include the following:\n
+Password Generation: Generates strong, random passwords based on user preferences (e.g., length, special characters, numbers, capital letters).\n
+Password Encryption: Encrypts generated passwords using the NaCl library for enhanced security.\n
+Password Decryption: Allows users to decrypt encrypted passwords by providing the secret key used for encryption.\n
+Password Strength Evaluation: Provides an indication of the strength of generated passwords based on industry-standard metrics.\n
 Password Saving: Offers the option to save encrypted passwords to a text file for future reference.
 
 To use the manager, one must run the file, in which a separate window will appear and prompt the user to select the number of characters, numbers, and special characters desired in the password. It also allows the user to select if they want the password to have uppercase letters or be all lowercase. Then, the user should press "Generate Password", which will provide the user with the generated password, the encrypted password, the secret key used to encrypt the password, and the perceived "Password Strength" based on the password-strength library. Then, the manager also allows users to store that information on their device by automatically popping up another window, asking the user if they would like to do just that. If the user presses "Yes", the encrypted password and secret key will be stored in a text file in the Passwords folder on that device with a name of their choice. If the user presses "No", nothing happens. The manager also contains a button at the bottom of the original window that says "I want to decrypt", which if pressed, opens up another window that allows the user to input the encrypted password as well as the secret key used to encrypt it, and returns the original, decrypted password if given the correct inputs.
